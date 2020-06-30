@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="IClock"
+        android:textColor="#000"
+        />
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/picture1"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <TextView
+        android:id="@+id/user_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/image_view"
+        android:layout_marginTop="20dp"
+        android:text="学号:"
+        android:textColor="#000"
+        />
+    <TextView
+        android:id="@+id/user_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/user_id"
+        android:layout_marginTop="20dp"
+        android:text="密码:"
+        android:textColor="#000"
+        />
+    <EditText
+        android:id="@+id/text_userid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/user_id"
+        app:layout_constraintBottom_toBottomOf="@id/user_id"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="70dp"
+        android:hint="请输入学号"
+        android:digits="0123456789"
+        android:textColor="#BEBEBE"
+        />
+    <EditText
+        android:id="@+id/text_userpwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/user_pwd"
+        app:layout_constraintBottom_toBottomOf="@id/user_pwd"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="70dp"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:textColor="#BEBEBE"
+        />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/text_userpwd"
+        tools:layout_editor_absoluteX="-67dp">
+        <CheckBox
+            android:id="@+id/remember_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="270dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="记住密码"
+            android:textSize="18sp"
+
+            />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/btn_signin"
+        app:layout_constraintTop_toBottomOf="@id/text_userpwd"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="登录"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/signinsel" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/btn_signin"
+        android:id="@+id/user_reg"
+        android:layout_marginTop="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="还没有账号？"
+        android:textSize="15sp"/>
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/user_reg"
+        android:id="@+id/btn_reg"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+        android:text="注册"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/signinsel"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>
