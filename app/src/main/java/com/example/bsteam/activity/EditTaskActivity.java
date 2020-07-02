@@ -25,6 +25,7 @@ public class EditTaskActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_task);
         ExitApplication.getInstance().addActivity(this);
+
         final Task task = (Task)getIntent().getSerializableExtra("task");
 //        Toast.makeText(EditTaskActivity.this,task.getTaskName(),Toast.LENGTH_LONG).show();
         TextView textView_title = findViewById(R.id.edit_task_title);
@@ -155,8 +156,13 @@ public class EditTaskActivity extends AppCompatActivity {
                         DatabaseOperation dbo = new DatabaseOperation("task",EditTaskActivity.this);
                         task.setTaskState(0);
                         dbo.updateTask(task);
+//                        //销毁上一个活动
+//                        if(FirstActivity.instance!=null){
+//                            FirstActivity.instance.finish();
+//                        }
                         //跳转回FirstActivity
                         Intent intent = new Intent(EditTaskActivity.this,FirstActivity.class);
+                        intent.putExtra("user_id",task.getUserId());
                         startActivity(intent);
 //                        finish();//销毁当前活动
                     }else{

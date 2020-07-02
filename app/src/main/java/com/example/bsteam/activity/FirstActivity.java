@@ -53,12 +53,13 @@ public class FirstActivity extends AppCompatActivity {
     private static final int INDEX_MORE = 3;
 
     private String userId = "";
-
+//    public static FirstActivity instance = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
         ExitApplication.getInstance().addActivity(this);
+//        instance = this;
         Intent intent = getIntent();
         userId = intent.getStringExtra("user_id");
 

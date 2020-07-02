@@ -90,13 +90,14 @@ public class ClockInFragment extends Fragment {
 //        taskList.addAll(Arrays.asList(tasks));
         DatabaseOperation dbo = new DatabaseOperation("task",getActivity());//调取数据库操作界面
         taskList=dbo.initList(mUserId);                                                //获取数据库中指定userid的所有task
+//        Toast.makeText(getActivity(),taskList.size(),Toast.LENGTH_LONG).show();
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-//        initTasks();
-        adapter.reflesh(taskList);
-    }
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+////        initTasks();
+//        adapter.reflesh(taskList);
+//    }
 
 }

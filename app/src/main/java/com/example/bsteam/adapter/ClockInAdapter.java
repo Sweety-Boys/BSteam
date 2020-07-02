@@ -118,12 +118,12 @@ public class ClockInAdapter extends RecyclerView.Adapter<ClockInAdapter.ViewHold
         }
         notifyDataSetChanged();    //刷新adapters
     }
-    //刷新显示
-    public void reflesh(List<Task> taskList){
-        this.mTaskList.clear();
-        this.mTaskList.addAll(taskList);
-        //重点内容
-        this.notifyDataSetChanged();
-    }
+//    //刷新显示
+//    public void reflesh(List<Task> taskList){
+//        this.mTaskList.clear();
+//        this.mTaskList.addAll(taskList);
+//        //重点内容
+//        this.notifyDataSetChanged();
+//    }
 
 }
