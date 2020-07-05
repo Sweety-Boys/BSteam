@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bxll="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.FirstActivity">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:padding="8dp"
+        android:background="#ffeeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <com.example.bsteam.view.TabView
+            android:id="@+id/tab_clock_in"
+            bxll:tabImage="@mipmap/clockin_normal"
+            bxll:tabSelectedImage="@mipmap/clockin_selected"
+            bxll:tabColor="#FF45C01A"
+            bxll:tabTitle="打卡"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.example.bsteam.view.TabView
+            android:id="@+id/tab_choose"
+            bxll:tabImage="@mipmap/choose_normal"
+            bxll:tabSelectedImage="@mipmap/choose_selected"
+            bxll:tabColor="#FF45C01A"
+            bxll:tabTitle="选择"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.example.bsteam.view.TabView
+            android:id="@+id/tab_card"
+            bxll:tabImage="@mipmap/card_normal"
+            bxll:tabSelectedImage="@mipmap/card_selected"
+            bxll:tabColor="#FF45C01A"
+            bxll:tabTitle="卡包"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <com.example.bsteam.view.TabView
+            android:id="@+id/tab_more"
+            bxll:tabImage="@mipmap/more_normal"
+            bxll:tabColor="#FF45C01A"
+            bxll:tabSelectedImage="@mipmap/more_selected"
+            bxll:tabTitle="更多"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</FrameLayout>

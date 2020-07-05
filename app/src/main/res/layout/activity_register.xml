@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="注册"
+        android:textSize="16sp"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:layout_below="@id/text_1"
+        android:inputType="number"
+        android:hint="账号(默认为学号)" />
+    <EditText
+        android:id="@+id/password_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:layout_below="@id/account"
+        android:hint="请输入密码" />
+    <EditText
+        android:id="@+id/password_2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:inputType="textPassword"
+        android:layout_below="@id/password_1"
+        android:hint="请确认密码" />
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@id/password_2"
+        android:text="确认"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/signinsel" />
+</RelativeLayout>
