@@ -47,6 +47,7 @@ public class ClockInAdapter extends RecyclerView.Adapter<ClockInAdapter.ViewHold
     public ClockInAdapter(List<Task> taskList, int taskView) {
         mTaskList = taskList;
         mTaskView = taskView;
+
     }
 
     @Override
